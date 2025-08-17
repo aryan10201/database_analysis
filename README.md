@@ -1,190 +1,191 @@
 # Elyx Life – Member Journey API & Frontend
 
-A comprehensive health journey tracking system that generates 8 months of WhatsApp-style communication between an Elyx member (Rohan Patel) and the Elyx team, builds a member journey timeline, and tracks internal metrics.
+A comprehensive health journey tracking system that generates **8 months of WhatsApp-style communication** between an Elyx member and the Elyx team, builds a **member journey timeline**, and tracks **internal metrics**.
 
-## 🎯 Features
+## ✨ Features
 
-### 1. Communication Message Generation 💬
-- **8-month conversation simulation** with realistic health-related discussions
-- **WhatsApp-style messaging** between Rohan Patel and Elyx team members
-- **Various conversation types**: general queries, health plan updates, weekly reports, follow-ups
-- **Realistic constraints**:
-  - Full diagnostic test panel every 3 months
-  - Member initiates ~5 conversations per week
-  - 5 hours per week commitment (with 50% adherence)
-  - Exercise updates every 2 weeks
-  - Travel week every 4 weeks (Singapore-based member)
+### AI-Powered Data Generation
+- Integrated with **Groq AI** to generate realistic health journeys through API endpoints
+- Simulated 8-month conversation history with WhatsApp-style messaging using Master Promts created after observing problem statement
 
-### 2. Journey Visualization 📈
-- **Weekly timeline view** showing adherence, hours committed, and key events
-- **Day-by-day inspection** with messages, events, and decisions
-- **Decision tracking** explaining why specific interventions were made
-- **Event correlation** linking messages to medical decisions
+### Journey Visualization
+- Weekly timeline with adherence, commitment hours, and medical events
+- Day-by-day view of conversations, events, and health decisions
 
-### 3. Internal Metrics Tracking 📊
-- **Team effort monitoring**: doctor, coach, nutritionist, physio, and concierge hours
-- **Intervention tracking**: total medical and lifestyle interventions
-- **Performance analytics**: weekly and monthly summaries
+### Decision & Metrics Tracking
+- Tracks why interventions were made (diagnostics, lifestyle changes, etc.)
+- Team effort monitoring across doctors, coaches, nutritionists, physios, and concierge
+- Weekly and monthly performance analytics
 
 ## 🚀 Quick Start
-
-### Prerequisites
-- Python 3.8+ (tested with Python 3.13)
-- Node.js 16+ and npm
-- Windows PowerShell or Command Prompt
 
 ### Backend Setup (FastAPI)
 
 1. **Navigate to backend directory:**
-   ```bash
-   cd elyx_fastapi_app
-   ```
+```bash
+cd elyx_fastapi_app
+```
 
-2. **Install Python dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+2. **Create and activate a virtual environment:**
+```bash
+python -m venv venv
 
-3. **Start the backend server:**
-   ```bash
-   # Option 1: Direct command
-   python -m uvicorn app.main:app --host 127.0.0.1 --port 8080 --reload
-   
-   # Option 2: Use the batch file (Windows)
-   run_backend.bat
-   ```
+# Activate (Windows)
+venv\Scripts\activate
 
-4. **Verify backend is running:**
+# Activate (Linux/Mac)
+source venv/bin/activate
+```
+
+3. **Install dependencies:**
+```bash
+pip install -r requirements.txt
+```
+
+4. **Start the backend server:**
+```bash
+uvicorn app.main:app --host 127.0.0.1 --port 8080 --reload
+```
+
+5. **Verify backend is running:**
    - Open http://localhost:8080 in your browser
    - You should see the API documentation
 
 ### Frontend Setup (Next.js)
 
 1. **Navigate to frontend directory:**
-   ```bash
-   cd elyx_frontend
-   ```
+```bash
+cd elyx_frontend
+```
 
-2. **Install Node.js dependencies:**
-   ```bash
-   npm install
-   ```
+2. **Install dependencies:**
+```bash
+npm install
+```
 
 3. **Start the frontend development server:**
-   ```bash
-   # Option 1: Direct command
-   npm run dev
-   
-   # Option 2: Use the batch file (Windows)
-   run_frontend.bat
-   ```
+```bash
+npm run dev
+```
 
 4. **Open the application:**
    - Navigate to http://localhost:3000
    - You should see the Elyx Dashboard
 
-## 📱 Using the Application
-
-### 1. Generate Data
-- Start on the home page
-- Click "Run Simulation" to generate 8 months of conversation data
-- This creates the dataset needed for all other views
-
-### 2. Explore Conversations
-- **Chat View** (`/chat`): WhatsApp-style message interface
-  - Filter by message type (member, team, weekly reports, questions, replies)
-  - Search within messages
-  - View message tags and relationships
-
-### 3. View Journey Timeline
-- **Timeline View** (`/timeline`): Weekly progress overview
-  - See adherence percentages and hours committed
-  - Click on weeks to inspect specific days
-  - View events, decisions, and messages for each day
-
-### 4. Monitor Metrics
-- **Metrics View** (`/metrics`): Team performance dashboard
-  - Track hours spent by each team member
-  - Monitor intervention rates
-  - View performance summaries
-
-## 🔧 API Endpoints
+## 📡 API Endpoints
 
 ### Conversations
-- `POST /conversations/simulate` - Generate simulation data
-- `GET /conversations` - List all conversations
+- `GET /conversations/{member_id}` – Get Conversations
+- `GET /test-conversations/{member_id}` – Test Conversations
+
+### Journey Generation
+- `POST /generate-complete-journey` – Generate Complete Journey
+
+### AI
+- `GET /ai/models` – Get AI Models
+- `GET /ai/health` – AI Health Check
 
 ### Journey
-- `GET /journey/timeline` - Get complete timeline data
-- `GET /journey/day?date=YYYY-MM-DD` - Get specific day details
+- `GET /journey/journey/timeline/{member_id}` – Get Journey Timeline
+- `GET /journey/journey/conversations/{member_id}` – Get Conversations
+- `GET /journey/journey/decisions/{member_id}` – Get Decisions
+- `GET /journey/journey/metrics/{member_id}` – Get Metrics
+- `GET /journey/journey/team-metrics/{member_id}` – Get Team Metrics
+- `GET /journey/journey/decision-context/{decision_id}` – Get Decision Context
 
-### Metrics
-- `GET /metrics` - Get team performance metrics
-
-### Persona
-- `GET /persona` - Get member profile information
+### Health
+- `GET /health` – Health Check
 
 ## 🎨 Technical Details
 
-### Backend Architecture
-- **FastAPI** with automatic API documentation
-- **Pydantic models** for data validation
-- **Modular service structure** for maintainability
-- **State persistence** using JSON files
+- **Backend:** FastAPI with Pydantic models, modular service structure, and AI integration via Groq
+- **Frontend:** Next.js 14, React 18, Tailwind CSS, responsive dashboard with interactive filtering/search
+- **Data Logic:** Simulated conversation patterns, diagnostic testing every 3 months, exercise tracking, adherence simulation, and travel weeks every 4 weeks
 
-### Frontend Features
-- **Next.js 14** with React 18
-- **Tailwind CSS** for responsive design
-- **Real-time data fetching** from API
-- **Interactive filtering and search**
-- **Responsive design** for all screen sizes
+## 🖥️ Using the Application
 
-### Data Generation Logic
-- **Realistic conversation patterns** based on health goals
-- **Travel scheduling** every 4 weeks
-- **Diagnostic testing** every 3 months
-- **Exercise progression** every 2 weeks
-- **Adherence simulation** with 50% realistic compliance
+After running both **backend (FastAPI)** and **frontend (Next.js)**:
 
-## 🐛 Troubleshooting
+### 1. Dashboard Landing
+- Visit http://localhost:3000
+- You'll see the **Elyx Dashboard** with navigation to:
+  - **Chat View** (WhatsApp-style conversation)
+  - **Journey Timeline** (weekly health journey)
+  - **Metrics Dashboard** (aggregated analytics)
 
-### Common Issues
+### 2. Chat View
+- Simulates **8 months of conversations** between a member and the Elyx team
+- Shows:
+  - Daily WhatsApp-style messages
+  - Automated interventions (doctors, nutritionists, coaches, physios, concierge)
+  - AI-generated personalization powered by **Groq**
 
-1. **Backend won't start:**
-   - Ensure Python dependencies are installed: `pip install -r requirements.txt`
-   - Check if port 8080 is available
-   - Verify Python version (3.8+)
 
-2. **Frontend won't start:**
-   - Ensure Node.js dependencies are installed: `npm install`
-   - Check if port 3000 is available
-   - Verify Node.js version (16+)
+### 3. Journey Timeline
+- Weekly view of the member's journey
+- Includes:
+  - Adherence level (✅ full, ⚠ partial, ❌ missed)
+  - Commitment hours (exercise, physio, nutrition, doctor sessions)
+  - Diagnostics (blood tests, checkups, lab reports)
+  - Lifestyle events (e.g., travel weeks, stress incidents)
 
-3. **API calls failing:**
-   - Ensure backend is running on http://localhost:8080
-   - Check browser console for CORS errors
-   - Verify API endpoints in browser at http://localhost:8080/docs
 
-4. **No data showing:**
-   - Run the simulation first from the home page
-   - Check if the backend generated data successfully
-   - Verify the data directory exists and contains state.json
+### 4. Metrics Dashboard
+- Aggregated **weekly & monthly metrics**
+- Tracks:
+  - **Commitment Hours** across doctor, coach, nutrition, physio, and concierge
+  - **Adherence Trends** (weekly adherence levels)
+  - **Decision Metrics** (why interventions were made – diagnostics, lifestyle, adherence, etc.)
+  - **Team Metrics** (who contributed most to the member's journey)
 
-### Getting Help
-- Check the API documentation at http://localhost:8080/docs
-- Review browser console for JavaScript errors
-- Check terminal output for Python/Node.js errors
 
-## 🎯 Next Steps
+### 5. AI Integration
+- Elyx uses **Groq-powered AI models** for realistic data generation:
+  - **Health conversation simulation**
+  - **Decision-making context**
+  - **Personalized intervention patterns**
 
-The system is designed to be extensible. Consider adding:
-- **Real-time notifications** for new messages
-- **Data export** functionality
-- **Advanced analytics** and reporting
-- **Integration** with real health data sources
-- **Mobile app** version
-- **Multi-member support**
 
-## 📄 License
+### 6. Health Check
+Verify backend health with:
+```bash
+GET /health
+```
 
-This project is part of the Elyx Life health journey tracking system.
+## 🔧 Project Structure
+
+```
+elyx-life/
+├── elyx_fastapi_app/          # Backend FastAPI application
+│   ├── app/
+│   │   ├── main.py           # Main FastAPI application
+│   │   └── ...
+│   ├── requirements.txt      # Python dependencies
+│   └── venv/                # Virtual environment
+├── elyx_frontend/            # Frontend Next.js application
+│   ├── components/          # React components
+│   ├── pages/              # Next.js pages
+│   ├── package.json        # Node.js dependencies
+│   └── ...
+└── README.md               # This file
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 🆘 Support
+
+If you encounter any issues or have questions:
+
+1. Check the API documentation at http://localhost:8080 when the backend is running
+2. Ensure both backend and frontend are running on their respective ports
+3. Verify all dependencies are installed correctly
+
+---
+
+**Built with ❤️ by the Team Synergy**
