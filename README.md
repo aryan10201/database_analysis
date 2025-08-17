@@ -7,6 +7,7 @@ A comprehensive health journey tracking system that generates **8 months of What
 ### AI-Powered Data Generation
 - Integrated with **Groq AI** to generate realistic health journeys through API endpoints
 - Simulated 8-month conversation history with WhatsApp-style messaging using Master Promts created after observing problem statement
+- Since Groq was rate limited, process of generating data is slow to compensate rate limiting
 
 ### Journey Visualization
 - Weekly timeline with adherence, commitment hours, and medical events
