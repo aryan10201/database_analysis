@@ -2,6 +2,12 @@
 
 A comprehensive health journey tracking system that generates **8 months of WhatsApp-style communication** between an Elyx member and the Elyx team, builds a **member journey timeline**, and tracks **internal metrics**.
 
+## 🎨 Technical Details
+
+- **Backend:** FastAPI with Pydantic models, modular service structure, and AI integration via Groq
+- **Frontend:** Next.js 14, React 18, Tailwind CSS, responsive dashboard with interactive filtering/search
+- **Data Logic:** Simulated conversation patterns, diagnostic testing every 3 months, exercise tracking, adherence simulation, and travel weeks every 4 weeks
+
 ## ✨ Features
 
 ### AI-Powered Data Generation
@@ -96,12 +102,6 @@ npm run dev
 
 ### Health
 - `GET /health` – Health Check
-
-## 🎨 Technical Details
-
-- **Backend:** FastAPI with Pydantic models, modular service structure, and AI integration via Groq
-- **Frontend:** Next.js 14, React 18, Tailwind CSS, responsive dashboard with interactive filtering/search
-- **Data Logic:** Simulated conversation patterns, diagnostic testing every 3 months, exercise tracking, adherence simulation, and travel weeks every 4 weeks
 
 ## 🖥️ Using the Application
 
