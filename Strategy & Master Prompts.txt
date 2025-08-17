@@ -1,0 +1,214 @@
+# Elyx Communication Strategy & Implementation Plan
+
+## Step 1: Member Profile Analysis
+
+### Member Overview: Rohan Patel
+- **Age:** 46, Male
+- **Occupation:** Regional Head of Sales, FinTech company
+- **Location:** Singapore (primary), frequent travel to UK, US, South Korea, Jakarta
+- **Personal Assistant:** Sarah Tan
+
+### Key Health Goals & Timeline
+1. **Reduce heart disease risk** (family history) - Target: December 2026
+2. **Enhance cognitive function** for work performance - Target: June 2026
+3. **Implement annual health screenings** - Starting: November 2025
+
+### Critical Constraints & Behavioral Patterns
+- **Diagnostic Tests:** Every 3 months (4 full test panels over 8 months)
+- **Member Communication:** Up to 5 conversations per week average
+- **Plan Adherence:** ~50% success rate (requires plan modifications)
+- **Travel Schedule:** 1+ weeks away every 4 weeks
+- **Time Commitment:** 5 hours/week allocated to health plan
+- **Exercise Updates:** Every 2 weeks based on progress
+- **Chronic Condition:** Managing one condition (likely related to stress/cardiovascular)
+
+### Communication Preferences
+- **Style:** Executive summaries with access to detailed data
+- **Channels:** WhatsApp for updates, coordination via PA (Sarah)
+- **Response Time:** 24-48 hours for non-urgent matters
+- **Cultural:** English, Indian background
+- **Tech:** Garmin watch user, considering Oura ring
+
+## Step 2: AI/LLM Prompting Strategy
+
+### Master Prompt Framework
+
+```
+You are generating realistic WhatsApp-style communication between Rohan Patel (46, Regional Head of Sales, Singapore-based, frequent traveler) and the Elyx health optimization team over [TIME_PERIOD]. 
+
+MEMBER PROFILE:
+- Analytical, driven, values efficiency and evidence-based approaches
+- Family history of heart disease, managing work stress
+- Travel schedule: 1+ weeks away every 4 weeks
+- Time allocation: 5 hours/week for health plan
+- Plan adherence: ~50% success rate
+- Communication: Up to 5 conversations/week average
+- Prefers executive summaries, responds within 24-48 hours
+
+ELYX TEAM ROLES:
+- Ruby (Concierge): Empathetic, organized, logistics coordinator
+- Dr. Warren (Medical Strategist): Authoritative, precise, clinical authority
+- Advik (Performance Scientist): Analytical, data-driven, wearables expert
+- Carla (Nutritionist): Practical, educational, behavioral change focus
+- Rachel (PT): Direct, encouraging, movement and form expert
+- Neel (Lead): Strategic, big-picture, relationship management
+
+CONSTRAINTS:
+- Diagnostic tests every 3 months
+- Exercise plan updates every 2 weeks
+- Member travels 1+ weeks every 4 weeks
+- Plan modifications needed ~50% of time due to logistics/preferences
+- Include realistic friction points and resolutions
+```
+
+### Episode-Specific Prompts
+
+#### Month 1: Onboarding & Initial Assessment
+```
+Generate Week 1-4 communications for Rohan's onboarding with Elyx team.
+
+SPECIFIC REQUIREMENTS:
+- Initial health concerns about Garmin high-intensity minutes
+- Medical history collection and physical exam scheduling
+- First diagnostic test panel coordination
+- Friction points: scheduling around travel, communication clarity
+- Include Ruby coordinating logistics, Dr. Warren reviewing medical history
+- End with commitment to initial intervention plan
+
+TRAVEL CONTEXT: Rohan has a 5-day trip to Seoul in Week 3
+REALISTIC ELEMENTS: Delayed responses due to time zones, rescheduling needs
+```
+
+#### Month 2: Test Results & Plan Development
+```
+Generate Week 5-8 communications focusing on test results and intervention planning.
+
+SPECIFIC REQUIREMENTS:
+- Dr. Warren sharing categorized test results (major issues/follow-up/okay)
+- Team discussions about results with different specialists
+- Member's commitment to lifestyle interventions
+- Carla discussing nutrition based on initial panels
+- Rachel designing initial exercise program
+- 50% adherence pattern beginning to show
+
+TRAVEL CONTEXT: UK business trip in Week 6
+REALISTIC ELEMENTS: Plan modifications needed for hotel gym access
+```
+
+#### Month 3: Implementation & First Adjustments
+```
+Generate Week 9-12 communications during active intervention phase.
+
+SPECIFIC REQUIREMENTS:
+- Weekly check-ins by Ruby
+- Fortnightly medical team follow-ups
+- First plan modifications due to travel constraints
+- Advik analyzing Garmin data trends
+- End with second diagnostic test panel (3-month mark)
+- Show realistic adherence challenges and solutions
+
+TRAVEL CONTEXT: Jakarta trip in Week 11
+REALISTIC ELEMENTS: Jet lag affecting HRV data, local food challenges
+```
+
+#### Month 4: Progress Review & Optimization
+```
+Generate Week 13-16 communications around progress review and plan optimization.
+
+SPECIFIC REQUIREMENTS:
+- Dr. Warren reviewing 3-month test results
+- Team strategy session for next steps
+- Neel providing strategic perspective on progress
+- Plan modifications based on data and member feedback
+- Preparation for cognitive enhancement focus (approaching June 2026 goal)
+
+TRAVEL CONTEXT: Extended US trip (10 days) in Weeks 14-15
+REALISTIC ELEMENTS: Multiple time zone adjustments, eating schedule disruptions
+```
+
+#### Month 5: Mid-Journey Intensification
+```
+Generate Week 17-20 communications focusing on cognitive enhancement and stress management.
+
+SPECIFIC REQUIREMENTS:
+- Advik introducing advanced HRV protocols
+- Carla optimizing nutrition for cognitive performance
+- Rachel adding specific brain-health exercises
+- Managing work stress during high-pressure quarter
+- Preparation for third diagnostic panel
+
+TRAVEL CONTEXT: Back-to-back Seoul and UK trips
+REALISTIC ELEMENTS: High stress period, reduced plan adherence, team support strategies
+```
+
+#### Month 6: Course Correction & Re-engagement
+```
+Generate Week 21-24 communications addressing adherence challenges and re-engagement.
+
+SPECIFIC REQUIREMENTS:
+- Third diagnostic test results review
+- Honest discussion about adherence challenges
+- Plan simplification and prioritization
+- Neel stepping in for strategic realignment
+- Focus on sustainable, travel-friendly interventions
+
+TRAVEL CONTEXT: Family vacation (non-business travel)
+REALISTIC ELEMENTS: Different motivation during personal time, family meal challenges
+```
+
+#### Month 7: Optimization & Preparation
+```
+Generate Week 25-28 communications optimizing protocols and preparing for annual screening.
+
+SPECIFIC REQUIREMENTS:
+- Fine-tuning successful interventions
+- Preparation for November 2025 full-body screening goal
+- Advanced cardiovascular assessment planning
+- Team coordination for comprehensive annual review
+- Data trend analysis across 6+ months
+
+TRAVEL CONTEXT: Reduced travel month (only one short trip)
+REALISTIC ELEMENTS: Better adherence, more consistent data, positive momentum
+```
+
+#### Month 8: Annual Review & Future Planning
+```
+Generate Week 29-32 communications conducting comprehensive review and future planning.
+
+SPECIFIC REQUIREMENTS:
+- Fourth diagnostic panel and comprehensive review
+- Annual full-body screening coordination (meeting November 2025 goal early)
+- Progress assessment against all three primary goals
+- Planning for year 2 of Elyx partnership
+- Team celebration of achievements and learnings
+
+TRAVEL CONTEXT: Planning around annual screening schedule
+REALISTIC ELEMENTS: Comprehensive data review, strategic planning for long-term success
+```
+
+## Step 3: Implementation Guidelines
+
+### Message Generation Approach
+1. **Conversation Threading:** Maintain realistic conversation flows with natural gaps and responses
+2. **Time Stamps:** Include realistic timing patterns (business hours, time zones, travel delays)
+3. **Personality Consistency:** Each team member maintains their distinct communication style
+4. **Data Integration:** Reference actual health metrics, wearable data, and test results
+5. **Friction Inclusion:** Add realistic challenges (scheduling conflicts, communication gaps, plan modifications)
+
+### Quality Control Elements
+- Reference numbering system for avoiding hallucination (like the sample)
+- Consistent character development and relationship building
+- Realistic progression of health metrics and goal achievement
+- Appropriate escalation protocols and team coordination
+- Cultural sensitivity and professional boundaries
+
+### Output Structure
+Each month's communication will include:
+- **Episode Summary:** Overview of primary goals and triggers
+- **Key Participants:** Which team members are primarily involved
+- **Friction Points:** Realistic challenges and their resolutions
+- **Outcomes:** Concrete results and next steps
+- **Metrics Tracking:** Response times, resolution periods, adherence rates
+- **Persona Evolution:** How Rohan's engagement and trust develop over time
+
+This framework ensures comprehensive, realistic communication that reflects the complexity of a premium health optimization service while maintaining authentic human interactions and professional healthcare delivery.
